@@ -1,0 +1,28 @@
+1-create nodes for the already existing stack A and fill them with AV[] argument values
+linking them in the process
+	
+	ex: t_stack	*fill_stack(int ac, char **av)
+	{
+		.... 
+	}	
+		
+		#its a /t_stack *(function name)/ type function because we'll need to return the linked list itself (aka stack A)
+
+	
+	1.1-for each node alocate (t_stack *) as -datatype and  (t_stack) as -sizeof
+		1.1.1-	first we'll need a function that creates nodes
+				ex:	
+					t_stack	*stack_new_node (void *content)
+					{
+						t_stack	*new_node;
+						
+						new_node = (t_stack *)malloc(sizeof(t_stack));
+						if (!new_node)
+							return (NULL);
+						new_node->content = content;
+						new_node->next = NULL;
+						return (new_node);
+					}
+		1.1.2- because the content from the input arguments comes in char datatype
+				we'll need an ATOI function to convert them to actual integers
+					

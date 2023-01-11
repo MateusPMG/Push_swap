@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/11 16:26:39 by mpatrao          ###   ########.fr       */
+/*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
+/*   Updated: 2023/01/11 16:26:13 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+t_stack	*stack_new_node(void *content)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack	*new_node;
 
-	if (ac < 2)
-		return (0);
-	if (!valid_input(av))
-		ft_error();
-	stack_b = NULL;
-	stack_a = fill_stack()
-
+	new_node = (t_stack *)malloc(sizeof(t_stack));
+	if (!new_node)
+		return (NULL);
+	new_node->value = content;
+	new_node->next = NULL;
+	return (new_node);
 }
