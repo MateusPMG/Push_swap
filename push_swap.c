@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/11 16:26:39 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/11 16:37:51 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	main(int ac, char **av)
 		ft_error();
 	stack_b = NULL;
 	stack_a = fill_stack()
-
+	
 }
