@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 12:17:02 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/12 12:30:41 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,15 @@ t_stack	*stack_add_bottom(t_stack **stack, t_stack *new_node)
 	current_node->next = new_node;
 }
 
-int	stack_size(t_stack *stack_a)
+int	stack_size(t_stack *stack)
 {
 	int	size;
 
 	size = 0;
-	
+	while (stack)
+	{
+		stack = stack->next;
+		size++;
+	}
+	return (size);
 }

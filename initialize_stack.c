@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:20:14 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 12:00:41 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/12 12:23:38 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ t_stack	*fill_stack(int ac, char **av)
 	}
 	return (stack_a);
 }
-
