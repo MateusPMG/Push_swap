@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:11:43 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/10 15:04:45 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/12 14:34:15 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	arg_is_number(char *av)
 {
 	int	i;
-
+	
+	i = 0;
 	if (is_sign(av[i]) && av[i + 1] != '\0')
 		i++;
 	while (av[i] && is_digit(av[i]))

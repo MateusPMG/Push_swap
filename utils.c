@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:48:03 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 10:39:27 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/12 14:32:38 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,17 @@ int	ft_atoi(const char *str)
 	}
 	result = result * sign;
 	return (result);
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack	*temp;
+
+	while (*stack != NULL)
+	{
+		temp = (*stack)->next;
+		free(*stack);
+		*stack = temp;
+	}
+	*stack = NULL;
 }

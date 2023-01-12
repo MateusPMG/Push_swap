@@ -6,13 +6,13 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 12:30:41 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/12 15:19:50 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*stack_new_node(void *content)
+t_stack	*stack_new_node(int content)
 {
 	t_stack	*new_node;
 
@@ -24,10 +24,11 @@ t_stack	*stack_new_node(void *content)
 	return (new_node);
 }
 
-t_stack	*stack_add_bottom(t_stack **stack, t_stack *new_node)
+void	stack_add_bottom(t_stack **stack, t_stack *new_node)
 {
 	t_stack	*current_node;
 
+	current_node = *stack;
 	while (current_node->next != NULL)
 		current_node = current_node->next;
 	current_node->next = new_node;

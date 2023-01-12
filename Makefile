@@ -1,6 +1,6 @@
 NAME = push_swap.a
 
-CC = CC
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
