@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 15:19:15 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/13 16:07:35 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ t_stack	*fill_stack(int ac, char **av);
 t_stack	*stack_new_node(int content);
 void	stack_add_bottom(t_stack **stack, t_stack *new_node);
 int		stack_size(t_stack *stack_a);
+
+/*moves*/
 
 
 
