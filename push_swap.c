@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 14:33:36 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/13 11:50:12 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
+
 	/*t_stack	*stack_b;*/
 	/*int		size;*/
 

@@ -1,4 +1,4 @@
-NAME = push_swap.a
+NAME = push_swap
 
 CC = cc
 
@@ -13,7 +13,7 @@ OBJ = $(SRC:.c=.o)
 all:			$(NAME)
 
 $(NAME):		$(OBJ)
-		ar rcs	$(NAME) $(OBJ)
+				$(CC) $(OBJ) -o $(NAME) 
 
 clean:
 				$(RM) $(OBJ)
