@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 14:32:31 by mpatrao          ###   ########.fr       */
+/*   Created: 2023/01/13 14:41:42 by mpatrao           #+#    #+#             */
+/*   Updated: 2023/01/13 16:05:48 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	swap_a()
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	int		size;
 
+}
 
-	if (ac < 2)
-		return (0);
-	if (!valid_input(av))
-		ft_error();
-	stack_b = NULL;
-	stack_a = fill_stack(ac, av);
-	size = stack_size(stack_a);
-	free_stack(&stack_a);
-	return (0);
+void	swap_b()
+{
+
+}
+
+void	do_sa()
+{
+	swap_a();
+	write(2, "sa\n", 3);
+}
+
+void	do_sb()
+{
+	swap_b();
+	write(2, "sb\n", 3);
+}
+
+void	do_ss()
+{
+	swap_a();
+	swap_b();
+	write (2, "ss\n", 3);
 }
