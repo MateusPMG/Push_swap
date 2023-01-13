@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:11:43 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 11:24:15 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/01/13 11:25:03 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	valid_input(char **av)
 	int	zeros;
 
 	i = 1;
-	zero = 0;
+	zeros = 0;
 	while (av[i])
 	{
 		if (!arg_is_number(av[i]))
