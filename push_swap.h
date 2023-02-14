@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 16:07:35 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/14 18:41:51 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ int		ft_error(void);
 int		ft_atoi(const char *str);
 void	free_stack(t_stack **stack);
 
-
 /*initialize stack*/
 t_stack	*fill_stack(int ac, char **av);
 
@@ -48,9 +47,18 @@ t_stack	*fill_stack(int ac, char **av);
 t_stack	*stack_new_node(int content);
 void	stack_add_bottom(t_stack **stack, t_stack *new_node);
 int		stack_size(t_stack *stack_a);
+t_stack	*get_stack_bottom(t_stack *stack);
+t_stack	*get_stack_before_bottom(t_stack *stack);
 
-/*moves*/
+/*swap*/
+void	swap(t_stack *stack);
+void	do_sa(t_stack *stack_a);
+void	do_sb(t_stack *stack_b);
+void	do_ss(t_stack *stack_a, t_stack *stack_b);
 
-
+/*push*/
+void	push(t_stack *start, t_stack *end);
+void	use_pa(t_stack *stack_b, t_stack *stack_a);
+void	use_pb(t_stack *stack_a, t_stack *stack_b);
 
 #endif

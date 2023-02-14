@@ -6,30 +6,32 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:42:05 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 15:56:16 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/14 18:14:04 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a()
+void	push(t_stack *start, t_stack *end)
 {
-	
+	t_stack	*tmp;
+
+	if (!start)
+		return ;
+	tmp = start->next;
+	start->next = end;
+	end = start;
+	start = tmp;
 }
 
-void	push_b()
+void	use_pa(t_stack *stack_b, t_stack *stack_a)
 {
-	
-}
-
-void	use_pa()
-{
-	push_a();
+	push(stack_b, stack_a);
 	write(2, "pa\n", 3);
 }
 
-void	use_pb()
+void	use_pb(t_stack *stack_a, t_stack *stack_b)
 {
-	push_b();
+	push(stack_a, stack_b);
 	write(2, "pb\n", 3);
 }

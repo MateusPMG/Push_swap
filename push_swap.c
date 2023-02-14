@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 14:32:31 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/14 18:31:28 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	main(int ac, char **av)
 	t_stack	*stack_b;
 	int		size;
 
-
 	if (ac < 2)
 		return (0);
 	if (!valid_input(av))
@@ -26,6 +25,6 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	stack_a = fill_stack(ac, av);
 	size = stack_size(stack_a);
-	free_stack(&stack_a);
+	/* free_stack(&stack_a); */
 	return (0);
 }

@@ -6,38 +6,41 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:42:34 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/13 15:46:32 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/14 18:49:43 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_a()
+void	reverse_rotate(t_stack *stack)
 {
-	
+	t_stack	*tmp;
+	t_stack	*bottom;
+	t_stack	*before_bottom;
+
+	bottom = get_stack_bottom(stack);
+	before_bottom = get_stack_before_bottom(stack);
+	tmp = stack;
+	stack = bottom;
+	stack->next = tmp;
+	before_bottom->next = NULL;
 }
 
-void	reverse_rotate_b()
+void	use_rra(t_stack *stack_a)
 {
-	
-}
-
-void	use_rra()
-{
-	reverse_rotate_a();
+	reverse_rotate(stack_a);
 	write(2, "rra\n", 4);
-
 }
 
-void	use_rrb()
+void	use_rrb(t_stack *stack_b)
 {
-	reverse_rotate_b();
+	reverse_rotate(stack_b);
 	write(2, "rrb\n", 4);
 }
 
-void	use_rrr()
+void	use_rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	reverse_rotate_a();
-	reverse_rotate_b();
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
 	write(2, "rrr\n", 4);
 }
