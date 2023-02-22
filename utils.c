@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:48:03 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/01/12 14:32:38 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/22 14:56:41 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,15 @@ void	free_stack(t_stack **stack)
 		*stack = temp;
 	}
 	*stack = NULL;
+}
+
+int	is_sorted(t_stack *stack)
+{
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

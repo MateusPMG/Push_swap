@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/14 18:41:51 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/22 14:53:20 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		n_string_compare(const	char *s1, const char *s2);
 int		ft_error(void);
 int		ft_atoi(const char *str);
 void	free_stack(t_stack **stack);
+int		is_sorted(t_stack *stack);
 
 /*initialize stack*/
 t_stack	*fill_stack(int ac, char **av);
@@ -52,13 +53,28 @@ t_stack	*get_stack_before_bottom(t_stack *stack);
 
 /*swap*/
 void	swap(t_stack *stack);
-void	do_sa(t_stack *stack_a);
-void	do_sb(t_stack *stack_b);
-void	do_ss(t_stack *stack_a, t_stack *stack_b);
+void	use_sa(t_stack *stack_a);
+void	use_sb(t_stack *stack_b);
+void	use_ss(t_stack *stack_a, t_stack *stack_b);
 
 /*push*/
 void	push(t_stack *start, t_stack *end);
 void	use_pa(t_stack *stack_b, t_stack *stack_a);
 void	use_pb(t_stack *stack_a, t_stack *stack_b);
+
+/*rotate*/
+void	rotate(t_stack **stack);
+void	use_ra(t_stack **stack_a);
+void	use_rb(t_stack **stack_b);
+void	use_rr(t_stack **stack_a, t_stack **stack_b);
+
+/*reverse rotate*/
+void	reverse_rotate(t_stack **stack);
+void	use_rra(t_stack **stack_a);
+void	use_rrb(t_stack **stack_b);
+void	use_rrr(t_stack **stack_a, t_stack **stack_b);
+
+/*sort 3 or 2*/
+void	sort_3(t_stack **stack);
 
 #endif

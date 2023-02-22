@@ -1,12 +1,13 @@
 NAME = push_swap
 
-CC = cc
+CC = @cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
-RM = rm -f
+RM = @rm -f
 
-SRC = push_swap.c input_check.c input_check_utils.c utils.c initialize_stack.c stack_utils.c
+SRC = push_swap.c input_check.c input_check_utils.c utils.c initialize_stack.c stack_utils.c\
+push.c sort_3_or_2.c reverse_rotate.c rotate.c swap.c
 
 OBJ = $(SRC:.c=.o)
 

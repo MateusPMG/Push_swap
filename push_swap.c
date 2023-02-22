@@ -6,11 +6,12 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/14 18:31:28 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/22 14:47:25 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 int	main(int ac, char **av)
 {
@@ -25,6 +26,13 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	stack_a = fill_stack(ac, av);
 	size = stack_size(stack_a);
-	/* free_stack(&stack_a); */
+	printf("%ld\n", stack_a->value);
+	printf("%ld\n", stack_a->next->value);
+	printf("%ld\n", stack_a->next->next->value);
+	sort_3(&stack_a);
+	printf("%ld\n", stack_a->value);
+	printf("%ld\n", stack_a->next->value);
+	printf("%ld\n", stack_a->next->next->value);
+	free_stack(&stack_a);
 	return (0);
 }
