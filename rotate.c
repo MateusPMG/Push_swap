@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:41:51 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/22 14:41:15 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/23 17:10:16 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ void	rotate(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*bottom;
 
-	tmp = *stack;
-	*stack = (*stack)->next;
-	bottom = get_stack_bottom(*stack);
+	tmp = stack;
+	stack = stack->next;
+	bottom = get_stack_bottom(stack);
 	tmp->next = NULL;
 	bottom->next = tmp;
+	tmp->next = NULL;
 }
 
 void	use_ra(t_stack **stack_a)
