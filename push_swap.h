@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 16:02:26 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/24 16:10:35 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size);
 /*get small or big*/
 int		get_smallest(t_stack **stack);
 int		get_second_smallest(t_stack **stack);
+int		get_biggest(t_stack **stack);
 
 #endif
