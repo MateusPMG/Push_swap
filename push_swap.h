@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 13:51:28 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/24 14:05:04 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,10 @@ void	use_rrr(t_stack **stack_a, t_stack **stack_b);
 void	sort_3(t_stack **stack);
 void	sort_2(t_stack **stack);
 
+/*sort 5 or 4*/
+void	sort_4(t_stack	**stack);
+
+/*sort pick*/
+void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size);
 
 #endif

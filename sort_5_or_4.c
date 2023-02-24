@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 15:31:21 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/22 16:04:34 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/24 14:05:22 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	sort_4(t_stack	**stack)
 {
 	long int	a;
-	t_stack		*tmp;
 
 	a = (*stack)->value;
-	tmp = stack;
 	if (a == 1)
 	{
-		sort_3(tmp);
+		sort_3(&((*stack)->next));
 	}
 }
