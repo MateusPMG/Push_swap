@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 13:57:09 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/24 14:12:36 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ int	main(int ac, char **av)
 	printf("%ld\n", stack_a->value);
 	printf("%ld\n", stack_a->next->value);
 	printf("%ld\n", stack_a->next->next->value);
+	printf("%ld\n", stack_a->next->next->next->value);
 	pick_sort(&stack_a, &stack_b, size);
 	printf("%ld\n", stack_a->value);
 	printf("%ld\n", stack_a->next->value);
 	printf("%ld\n", stack_a->next->next->value);
+	printf("%ld\n", stack_a->next->next->next->value);
 	free_stack(&stack_a);
 	return (0);
 }

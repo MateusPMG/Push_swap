@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   get_small_or_big.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 14:42:05 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 14:52:59 by mpatrao          ###   ########.fr       */
+/*   Created: 2023/02/24 15:44:10 by mpatrao           #+#    #+#             */
+/*   Updated: 2023/02/24 15:47:20 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack **start, t_stack **end)
+int	get_smallest(t_stack **stack)
 {
-	t_stack	*tmp;
+	long int	min;
+	t_stack		*tmp;
 
-	if (!start)
-		return ;
-	tmp = (*start)->next;
-	(*start)->next = *end;
-	*end = *start;
-	*start = tmp;
+	min = (*stack)->value;
+	tmp = *stack;
+	while (tmp->next != NULL)
+	{
+		if (tmp->value < min)
+			min = tmp->value;
+		tmp = tmp->next;
+	}
+	return (min);
 }
 
-void	use_pa(t_stack **stack_b, t_stack **stack_a)
+int	get_second_smallest(t_stack **stack)
 {
-	push(stack_b, stack_a);
-	write(2, "pa\n", 3);
-}
-
-void	use_pb(t_stack **stack_a, t_stack **stack_b)
-{
-	push(stack_a, stack_b);
-	write(2, "pb\n", 3);
+	
 }
