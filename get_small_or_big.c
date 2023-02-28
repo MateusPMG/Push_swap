@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:44:10 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 16:09:39 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/28 14:37:55 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	get_smallest(t_stack **stack)
 			min = tmp->value;
 		tmp = tmp->next;
 	}
+	if (tmp->value < min)
+		min = tmp->value;
 	return (min);
 }
 
@@ -50,6 +52,8 @@ int	get_second_smallest(t_stack **stack)
 			min2 = tmp->value;
 		tmp = tmp->next;
 	}
+	if (tmp->value > min && tmp->value < min2)
+			min2 = tmp->value;
 	return (min2);
 }
 
@@ -66,5 +70,34 @@ int	get_biggest(t_stack **stack)
 			max = tmp->value;
 		tmp = tmp->next;
 	}
+	if (tmp->value > max)
+			max = tmp->value;
 	return (max);
+}
+
+int	get_second_biggest(t_stack **stack)
+{
+	long int	max;
+	long int	max2;
+	t_stack		*tmp;
+	int			flag;
+
+	max = get_biggest(stack);
+	max2 = max;
+	tmp = *stack;
+	flag = 0;
+	while (tmp->next != NULL)
+	{
+		if (tmp->value < max && flag == 0)
+		{
+			max2 = tmp->value;
+			flag++;
+		}
+		if (tmp->value < max && tmp->value > max2)
+			max2 = tmp->value;
+		tmp = tmp->next;
+	}
+	if (tmp->value < max && tmp->value > max2)
+			max2 = tmp->value;
+	return (max2);
 }

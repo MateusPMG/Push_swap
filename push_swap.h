@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/28 11:25:00 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/02/28 16:36:09 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct l_list
 {
 	long int			value;
+	int					position;
 	struct l_list		*next;
 }t_stack;
 
@@ -78,8 +79,11 @@ void	use_rrr(t_stack **stack_a, t_stack **stack_b);
 void	sort_3(t_stack **stack);
 void	sort_2(t_stack **stack);
 
-/*sort 5 or 4*/
+/*sort 4*/
 void	sort_4(t_stack	**stack_a, t_stack **stack_b);
+
+/*sort 5*/
+void	sort_5(t_stack **stack_a, t_stack **stack_b);
 
 /*sort pick*/
 void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size);
@@ -88,5 +92,6 @@ void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size);
 int		get_smallest(t_stack **stack);
 int		get_second_smallest(t_stack **stack);
 int		get_biggest(t_stack **stack);
+int		get_second_biggest(t_stack **stack);
 
 #endif

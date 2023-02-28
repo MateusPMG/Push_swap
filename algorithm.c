@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_pick.c                                        :+:      :+:    :+:   */
+/*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/22 15:21:15 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/28 15:07:51 by mpatrao          ###   ########.fr       */
+/*   Created: 2023/02/28 15:06:44 by mpatrao           #+#    #+#             */
+/*   Updated: 2023/02/28 16:38:21 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size)
+void	keep_5(t_stack **stack_a, t_stack **stack_b)
 {
-	if (size == 2)
-		sort_2(stack_a);
-	else if (size == 3)
-		sort_3(stack_a);
-	else if (size == 4)
-		sort_4(stack_a, stack_b);
-	else if (size == 5)
-		sort_5(stack_a, stack_b);
-	else
-		algorithm();
+	int	size;
+	int	pushed;
+	int	i;
+
+	size = stack_size(*stack_a);
+	pushed = 0;
+	i = 0;
+	while ((size - pushed) != 5)
+	{
+		
+	}
+}
+
+void	algorithm(t_stack **stack_a, t_stack **stack_b)
+{
+	keep_5(stack_a, stack_b);
+	sort_5(stack_a, stack_b);
+	
 }
