@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_pick.c                                        :+:      :+:    :+:   */
+/*   cost.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/22 15:21:15 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/01 14:16:29 by mpatrao          ###   ########.fr       */
+/*   Created: 2023/03/01 14:30:51 by mpatrao           #+#    #+#             */
+/*   Updated: 2023/03/01 15:06:59 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size)
+int	current_cost(t_stack *stack)
 {
-	if (size == 2)
-		sort_2(stack_a);
-	else if (size == 3)
-		sort_3(stack_a);
-	else if (size == 4)
-		sort_4(stack_a, stack_b);
-	else if (size == 5)
-		sort_5(stack_a, stack_b);
+	int		cost;
+	t_stack	*tmp;
+
+	tmp = stack;
+	cost = 0;
+	while (tmp)
+	{
+		
+	}
+
+	return (cost);
+}
+
+int	min_cost(t_stack *stack)
+{
+	int		cost;
+	t_stack	*tmp;
+
+	tmp = stack;
+	while (tmp)
+	{
+		if (cost < current_cost(tmp))
+			cost = current_cost(tmp);
+		
+	}
 }

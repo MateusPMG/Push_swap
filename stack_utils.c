@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 14:19:55 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/01 13:35:33 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_stack	*stack_new_node(int content)
 		return (NULL);
 	new_node->value = content;
 	new_node->next = NULL;
+	new_node->position = 0;
 	return (new_node);
 }
 

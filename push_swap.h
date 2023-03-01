@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/28 16:36:09 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/01 14:06:38 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int		is_sorted(t_stack *stack);
 
 /*initialize stack*/
 t_stack	*fill_stack(int ac, char **av);
+void	init_pos(t_stack *stack_a);
 
 /*stack utils*/
 t_stack	*stack_new_node(int content);

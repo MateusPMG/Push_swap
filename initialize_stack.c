@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:20:14 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/28 16:35:26 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/01 14:17:52 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,27 @@ t_stack	*fill_stack(int ac, char **av)
 		i++;
 	}
 	return (stack_a);
+}
+
+void	init_pos(t_stack *stack_a)
+{
+	int		size;
+	t_stack	*temp;
+	t_stack	*start;
+
+	size = stack_size(stack_a);
+	start = stack_a;
+	temp = stack_a;
+	while (start)
+	{
+		if (start->value < temp->value)
+			temp->position++;
+		temp = temp->next;
+		if (temp == NULL)
+		{
+			start = start->next;
+			temp = stack_a;
+		}
+	}
+	return ;
 }
