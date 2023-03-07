@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:06:44 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/07 16:12:13 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/07 16:20:07 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void	algorithm(t_stack **stack_a, t_stack **stack_b)
 
 	keep_5(stack_a, stack_b);
 	sort_5(stack_a, stack_b);
+	tmp = 0;
 	while (*stack_b)
 	{
 		*tmp = min_cost_adress(*stack_a, *stack_b);
