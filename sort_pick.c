@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 15:21:15 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/01 14:16:29 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/07 16:23:08 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,6 @@ void	pick_sort(t_stack **stack_a, t_stack **stack_b, int size)
 		sort_4(stack_a, stack_b);
 	else if (size == 5)
 		sort_5(stack_a, stack_b);
+	else
+		algorithm(stack_a, stack_b);
 }

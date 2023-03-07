@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 14:26:34 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/28 14:55:29 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/07 16:44:58 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	push_smallest_b2(t_stack **stack_a, t_stack **stack_b, long int a)
 {
 	if ((*stack_a)->value == a)
-		use_pb(stack_a, stack_a);
+		use_pb(stack_a, stack_b);
 	else if ((*stack_a)->next->value == a)
 	{
 		use_ra(stack_a);

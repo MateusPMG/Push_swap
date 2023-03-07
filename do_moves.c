@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 16:15:20 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/07 15:38:47 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/07 16:49:42 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	get_target(t_stack *stack_a, t_stack *stack_b, int above, int below)
 	return (below);
 }
 
-void	do_moves(t_stack **stack_a, t_stack **stack_b, t_stack **b_target)
+void	do_moves(t_stack **stack_a, t_stack **stack_b, t_stack *b_target)
 {
 	int	a_target;
 	int	a_id;
@@ -92,14 +92,14 @@ void	do_moves(t_stack **stack_a, t_stack **stack_b, t_stack **b_target)
 
 	a_target = get_target(*stack_a, *stack_b, INT_MAX, INT_MIN);
 	a_id = get_id(*stack_a, a_target);
-	b_id = get_id(*stack_b, (*b_target)->position);
+	b_id = get_id(*stack_b, (b_target)->position);
 	if (current_cost(*stack_a, *stack_b) == 1)
 	{
 		use_pa(stack_b, stack_a);
 		return ;
 	}
-	else if (a_target > (*b_target)->position)
+	else if (a_target > (b_target)->position)
 		do_moves_above(stack_a, stack_b, a_id, b_id);
-	else if (a_target < (*b_target)->position)
+	else if (a_target < (b_target)->position)
 		do_moves_below(stack_a, stack_b, a_id, b_id);
 }
