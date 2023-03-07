@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:29:45 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/03 16:27:09 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/07 15:39:47 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,18 @@ int		cost_a_above(int above, t_stack	*stack_a);
 int		cost_a_below(int below, t_stack *stack_a);
 
 /*do moves*/
-void	do_moves(t_stack **stack_a, t_stack **stack_b);
+void	do_moves(t_stack **stack_a, t_stack **stack_b, t_stack **b_target);
+
+/*do moves below utils*/
+void	rev_rotate_both1(t_stack **a, t_stack **b, int *a_id, int *b_id);
+void	rotate_both1(t_stack **a, t_stack **b, int *a_id, int *b_id);
+void	rotate_a1(t_stack **a, int *a_id);
+void	rotate_b1(t_stack **b, int *b_id);
+
+/*do moves above utils*/
+void	rev_rotate_both2(t_stack **a, t_stack **b, int *a_id, int *b_id);
+void	rotate_both2(t_stack **a, t_stack **b, int *a_id, int *b_id);
+void	rotate_a2(t_stack **a, int *a_id);
+void	rotate_b2(t_stack **b, int *b_id);
 
 #endif
