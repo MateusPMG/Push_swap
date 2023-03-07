@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:20:14 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/01 14:17:52 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/03 16:08:09 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,9 @@ t_stack	*fill_stack(int ac, char **av)
 
 void	init_pos(t_stack *stack_a)
 {
-	int		size;
 	t_stack	*temp;
 	t_stack	*start;
 
-	size = stack_size(stack_a);
 	start = stack_a;
 	temp = stack_a;
 	while (start)
