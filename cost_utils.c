@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 14:09:32 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/08 13:25:28 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/08 16:17:59 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	cost_a_above(int above, t_stack	*stack_a)
 		tmp = tmp->next;
 		i++;
 	}
-	if (i < size / 2)
+	if (i <= size / 2)
 		return (i);
-	else if (i >= size / 2)
+	else if (i > size / 2)
 		return (size - i);
 	return (0);
 }
