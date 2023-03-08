@@ -16,7 +16,7 @@ OBJ = $(SRC:.c=.o)
 all:			$(NAME)
 
 $(NAME):		$(OBJ)
-				$(CC) $(OBJ) -o $(NAME) 
+				$(CC) $(OBJ) -o $(NAME) -fsanitize=address
 
 clean:
 				$(RM) $(OBJ)

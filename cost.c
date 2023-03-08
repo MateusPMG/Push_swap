@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 14:30:51 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/03 16:09:25 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/08 13:33:42 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int	cost_b(t_stack *stack_b)
 	tmp_b = stack_b;
 	size = stack_size(stack_b);
 	i = 0;
+	cost_b = 0;
+	if (tmp_b->next == NULL)
+		return (cost_b);
 	while (tmp_b)
 	{
 		tmp_b = tmp_b->next;
@@ -63,7 +66,7 @@ int	current_cost(t_stack *stack_a, t_stack *stack_b)
 {
 	int		cost;
 
-	cost = cost_b(stack_b) + 1 + cost_a(stack_a, stack_b, INT_MAX, INT_MAX);
+	cost = cost_b(stack_b) + 1 + cost_a(stack_a, stack_b, INT_MAX, INT_MIN);
 	return (cost);
 }
 
@@ -73,6 +76,8 @@ t_stack	*min_cost_adress(t_stack *stack_a, t_stack *stack_b)
 	t_stack	*adress_b;
 	t_stack	*tmp;
 
+	if (stack_b->next == NULL)
+		return (stack_b);
 	tmp = stack_b->next;
 	cost = current_cost(stack_a, stack_b);
 	adress_b = stack_b;

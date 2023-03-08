@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/01 13:35:33 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/08 13:20:52 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,12 @@ t_stack	*get_stack_bottom(t_stack *stack)
 
 t_stack	*get_stack_before_bottom(t_stack *stack)
 {
-	while (stack->next->next != NULL)
+	int	size;
+	int	i;
+
+	size = stack_size(stack);
+	i = -1;
+	while (++i < size - 2)
 		stack = stack->next;
 	return (stack);
 }

@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:06:44 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/07 16:54:15 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/08 14:15:03 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	keep_5(t_stack **stack_a, t_stack **stack_b)
 
 	size = stack_size(*stack_a);
 	pushed = 0;
-	i = 0;
+	i = 1;
 	while (size > 6 && pushed < size / 2 && i < size)
 	{
-		if ((*stack_a)->position <= size / 2)
+		if ((*stack_a)->position < size / 2)
 		{
 			use_pb(stack_a, stack_b);
 			pushed++;

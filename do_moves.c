@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 16:15:20 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/07 16:49:42 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/08 14:43:44 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	do_moves_above(t_stack **stack_a, t_stack **stack_b, int a_id, int b_id)
 		rev_rotate_both2(stack_a, stack_b, &a_id, &b_id);
 	rotate_a2(stack_a, &a_id);
 	rotate_b2(stack_b, &b_id);
-	use_pa(stack_a, stack_b);
+	use_pa(stack_b, stack_a);
 }
 
 int	get_id(t_stack *stack, int target)
