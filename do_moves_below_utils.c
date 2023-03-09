@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:22:42 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/07 15:38:12 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 18:34:58 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	rotate_a1(t_stack **a, int *a_id)
 	int	s_a;
 
 	s_a = stack_size(*a);
-	if (*a_id < s_a / 2)
+	if (*a_id <= s_a / 2)
 	{
 		while (*a_id > 0)
 		{
@@ -65,7 +65,7 @@ void	rotate_b1(t_stack **b, int *b_id)
 	int	s_b;
 
 	s_b = stack_size(*b);
-	if (*b_id < s_b / 2)
+	if (*b_id <= s_b / 2)
 	{
 		while (*b_id > 1)
 		{

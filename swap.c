@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 14:41:42 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/01 13:39:32 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 15:37:23 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,18 @@ void	swap(t_stack *stack)
 void	use_sa(t_stack *stack_a)
 {
 	swap(stack_a);
-	write(2, "sa\n", 3);
+	write(1, "sa\n", 3);
 }
 
 void	use_sb(t_stack *stack_b)
 {
 	swap(stack_b);
-	write(2, "sb\n", 3);
+	write(1, "sb\n", 3);
 }
 
 void	use_ss(t_stack *stack_a, t_stack *stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	write (2, "ss\n", 3);
+	write (1, "ss\n", 3);
 }

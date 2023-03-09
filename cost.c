@@ -6,13 +6,13 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 14:30:51 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/08 13:33:42 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 17:09:56 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	cost_a(t_stack *stack_a, t_stack *stack_b, int above, int below)
+int	c_a(t_stack *stack_a, t_stack *stack_b, int above, int below)
 {
 	int		pos_b;
 	t_stack	*tmp_a;
@@ -37,7 +37,7 @@ int	cost_a(t_stack *stack_a, t_stack *stack_b, int above, int below)
 	return (cost_a_below(below, stack_a));
 }
 
-int	cost_b(t_stack *stack_b)
+int	c_b(t_stack *stack_b, t_stack *current)
 {
 	int		i;
 	int		cost_b;
@@ -50,7 +50,7 @@ int	cost_b(t_stack *stack_b)
 	cost_b = 0;
 	if (tmp_b->next == NULL)
 		return (cost_b);
-	while (tmp_b)
+	while (tmp_b != current)
 	{
 		tmp_b = tmp_b->next;
 		i++;
@@ -62,12 +62,12 @@ int	cost_b(t_stack *stack_b)
 	return (cost_b);
 }
 
-int	current_cost(t_stack *stack_a, t_stack *stack_b)
+int	current_cost(t_stack *stack_a, t_stack *stack_b, t_stack *current)
 {
-	int		cost;
+	int		c;
 
-	cost = cost_b(stack_b) + 1 + cost_a(stack_a, stack_b, INT_MAX, INT_MIN);
-	return (cost);
+	c = c_b(stack_b, current) + 1 + c_a(stack_a, current, INT_MAX, INT_MIN);
+	return (c);
 }
 
 t_stack	*min_cost_adress(t_stack *stack_a, t_stack *stack_b)
@@ -79,13 +79,13 @@ t_stack	*min_cost_adress(t_stack *stack_a, t_stack *stack_b)
 	if (stack_b->next == NULL)
 		return (stack_b);
 	tmp = stack_b->next;
-	cost = current_cost(stack_a, stack_b);
+	cost = current_cost(stack_a, stack_b, stack_b);
 	adress_b = stack_b;
 	while (tmp)
 	{
-		if (cost < current_cost(stack_a, tmp))
+		if (cost > current_cost(stack_a, stack_b, tmp))
 		{
-			cost = current_cost(stack_a, tmp);
+			cost = current_cost(stack_a, stack_b, tmp);
 			adress_b = tmp;
 		}
 		tmp = tmp->next;

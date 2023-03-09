@@ -6,17 +6,17 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:38:11 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/08 13:20:52 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 15:29:34 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*stack_new_node(int content)
+t_stack	*stack_new_node(long int content)
 {
 	t_stack	*new_node;
 
-	new_node = (t_stack *)malloc(sizeof(t_stack));
+	new_node = malloc(sizeof(t_stack));
 	if (!new_node)
 		return (NULL);
 	new_node->value = content;

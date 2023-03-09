@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:48:03 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/02/24 15:44:41 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 15:21:44 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_error(void)
 	exit (1);
 }
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
 	int			i;
-	int			sign;
+	long int	sign;
 	long int	result;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 16:15:20 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/08 16:53:05 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 18:19:45 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	do_moves_below(t_stack **stack_a, t_stack **stack_b, int a_id, int b_id)
 
 	s_a = stack_size(*stack_a);
 	s_b = stack_size(*stack_b);
-	if (a_id <= s_a / 2 && b_id <= s_b / 2)
+	if (a_id <= s_a / 2 && b_id <= s_b / 2 && b_id != 1 && a_id != s_a)
 		rotate_both1(stack_a, stack_b, &a_id, &b_id);
-	else if (a_id > s_a / 2 && b_id > s_b / 2)
+	else if (a_id > s_a / 2 && b_id > s_b / 2 && b_id != 1 && a_id != s_a)
 		rev_rotate_both1(stack_a, stack_b, &a_id, &b_id);
 	rotate_a1(stack_a, &a_id);
 	rotate_b1(stack_b, &b_id);
@@ -35,9 +35,9 @@ void	do_moves_above(t_stack **stack_a, t_stack **stack_b, int a_id, int b_id)
 
 	s_a = stack_size(*stack_a);
 	s_b = stack_size(*stack_b);
-	if (a_id <= s_a / 2 && b_id <= s_b / 2 && b_id != 1)
+	if (a_id <= s_a / 2 && b_id <= s_b / 2 && b_id != 1 && a_id != 1)
 		rotate_both2(stack_a, stack_b, &a_id, &b_id);
-	else if (a_id > s_a / 2 && b_id > s_b / 2)
+	else if (a_id > s_a / 2 && b_id > s_b / 2 && b_id != 1 && a_id != 1)
 		rev_rotate_both2(stack_a, stack_b, &a_id, &b_id);
 	rotate_a2(stack_a, &a_id);
 	rotate_b2(stack_b, &b_id);

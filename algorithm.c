@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:06:44 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/08 14:15:03 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/03/09 17:39:43 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,4 +102,6 @@ void	algorithm(t_stack **stack_a, t_stack **stack_b)
 	}
 	if (!is_sorted(*stack_a))
 		shift_stack(stack_a);
+	if (!is_sorted(*stack_a))
+		write(1, "No\n", 3);
 }
