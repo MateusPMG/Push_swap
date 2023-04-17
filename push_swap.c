@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:31:27 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/03/09 18:35:57 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/04/17 16:47:47 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	init_pos(stack_a);
-	/* print_list_info(stack_a); */
 	pick_sort(&stack_a, &stack_b, size);
-	/* print_list_info(stack_a); */
 	free_stack(&stack_a);
 	return (0);
 }
