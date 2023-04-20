@@ -6,7 +6,7 @@
 /*   By: mpatrao <mpatrao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:11:43 by mpatrao           #+#    #+#             */
-/*   Updated: 2023/04/18 15:35:39 by mpatrao          ###   ########.fr       */
+/*   Updated: 2023/04/20 15:37:07 by mpatrao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,19 +71,16 @@ int	valid_input(char **av)
 	{
 		if (!arg_is_number(av[i]))
 		{
-			write(2, "Error/n", 7);
 			return (0);
 		}
 		zeros += arg_is_zero(av[i]);
 	}
 	if (zeros > 1)
 	{
-		write(2, "Error/n", 7);
 		return (0);
 	}
 	if (arg_has_duplicate(av))
 	{
-		write(2, "Error/n", 7);
 		return (0);
 	}
 	return (1);
